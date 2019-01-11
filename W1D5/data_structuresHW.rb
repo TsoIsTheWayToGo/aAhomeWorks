@@ -18,6 +18,8 @@ class Stack
   attr_reader :arr
 end
 
+
+
 #excercise 2 Queue
 class Queue
   def initialize
@@ -39,6 +41,8 @@ class Queue
 
   attr_reader :arr
 end
+
+
 
 #excercise 3 map
 class Map
@@ -73,7 +77,13 @@ end
 attr_reader :arr
 
 def deep_dup(arr)
-   arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
+   arr.map do |el|
+       if el.is_a?(Array)
+           deep_dup(el)
+        else
+           el
+        end
+     end
  end 
 end
 
