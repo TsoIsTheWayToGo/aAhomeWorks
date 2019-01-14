@@ -8,7 +8,7 @@ class Simon
     @game_over = false
     @seq = []
   end
-
+#it works
   def play
     until @game_over
       take_turn
