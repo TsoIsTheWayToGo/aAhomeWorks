@@ -32,7 +32,7 @@ class Dessert
   def serve
     "#{@chef.titleize} has made #{@quantity} #{@type.pluralize}!"
   end
-
+  #
   def make_more
     @chef.bake(self)
   end
